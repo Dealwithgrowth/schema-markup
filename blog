@@ -1,0 +1,23 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ article.title }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ article.image.src | img_url: 'medium' }}",
+  },
+  "datePublished": "{{ article.published_at }}",
+  "author":{
+  	"@type": "Person",
+  	"name": "article.author"
+  },
+  "publisher":{
+  	"@type": "Organization",
+  	"name": "{{ shop.name }}"
+  },
+  "description": "{{ article.excerpt }}",
+  "articleBody": "{{ article.content }}"
+}
+</script>
+
